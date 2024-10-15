@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <link href="StyleSheet1.css" rel="stylesheet" />
+
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 10px;
+            background-color:black;
+            padding: 10px;
+        }
+
+            .grid-container > div {
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 1px solid black;
+                text-align: center;
+                font-size: 30px;
+            }
+    </style>
+
+
+    <title>log in</title>
+</head>
+
+<body style="background-image: url('wallpaperflare.com_wallpaper (53).jpg'); ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="HtmlPage1.html">Taaffeite</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="HtmlPage1.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HtmlPage2.html">Bracelets</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="HtmlPage3.html">Necklaces</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="HtmlPage4.html">Earrings</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="HtmlPage5.html">Rings</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="HtmlPage7.html">Our socials</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="HtmlPage10.html">log in</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <center>  <h1>log in </h1></center>
+    <h2> log in </h2>
+    <form>
+        <label for="username">username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="button" value="log in" onclick="validatePassword()">
+    </form>
+
+
+    <script>
+        function validatePassword() {
+            var passwordInput = document.getElementById("password").value;
+            var regex = /^\d+$/; // ביטוי רגולרי לבדיקה שהסיסמה מכילה רק מספרים
+
+            if (regex.test(passwordInput)) {
+                alert("הסיסמה מכילה רק מספרים.");
+            } else {
+                alert("הסיסמה יכולה לכלול תווים שונים ממספרים.");
+            }
+        }
+    </script>
+
+    <br />
+    <br />
+
+    <p>If you want to save the password, write a letter here!<p>
+        <textarea id="myTextarea" rows="3" cols="40"></textarea>
+    <p></p>
+    <button onclick="mySave()">Save</button>
+    <button onclick="myLoad()">Load</button>
+    <script>
+        function mySave() {
+            var myContent = document.getElementById("myTextarea").value;
+            localStorage.setItem("myContent", myContent);
+        }
+        function myLoad() {
+            var myContent = localStorage.getItem("myContent");
+            document.getElementById("myTextarea").value = myContent;
+        }
+    </script>
+
+    <br />
+    <br />
+
+    <p id="demo"></p>
+
+    <script>
+        let hello = "";
+
+        hello = () => {
+            return "taaffeite";
+        }
+
+        document.getElementById("demo").innerHTML = hello();
+    </script>
+    <br />
+    <br />
+
+    <p id="demo"></p>
+
+    <script>
+        const myTimeout = setTimeout(myGreeting, 5000);
+
+        function myGreeting() {
+            document.getElementById("demo").innerHTML = "There is a surprise on Our socials, please check there "
+        }
+    </script>
+    <br />
+
+    <p id="demo1"></p>
+
+    <script>
+        const element = document.getElementById("demo1");
+        setInterval(function () { element.innerHTML += "don't forget to check our socials  " + " " }, 13000);
+    </script>
+
+    <br />
+
+    <h1>more about taaffeite</h1>
+
+
+    <p>if you want to know more about taaffeite you can click in the bottom (click here)</p>
+
+    <button onclick="myFunction()">click here</button>
+
+    <script>
+        function myFunction() {
+            window.open("https://en.wikipedia.org/wiki/Taaffeite");
+        }</script>
+
+    <br />
+    <br />
+    <br />
+    <style>
+        #myHeader {
+            margin: 15px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <form id="myHeader" onclick="alert('Have a nice day!')">
+        click me!
+        <div id="myHeader" onclick="alert('come back again')">
+            click me!
+            <p id="myHeader" onclick="alert('If you liked our products')">
+                click me!
+            </p>
+        </div>
+    </form>
+    <br />
+    <br />
+    <br />
+    <h1>Taaffeite</h1>
+
+    <p>what do we have in store?!</p>
+
+    <div class="grid-container">
+        <div>BRACELETS</div>
+        <div>NECKLACE</div>
+        <div>EARRINGS</div>
+        <div>RINGS</div>
+
+    </div>
+    <br />
+    <br />
+    <p onclick="this.innerHTML='Shinning in elegance'">Taaffeite!</p>
+    <br />
+    <br />
+    <button id="myButton">Double Click Me</button>
+
+    <script>
+        function handleDoubleClick() {
+            alert("have fun!");
+        }
+
+        document.getElementById("myButton").addEventListener("dblclick", handleDoubleClick);
+    </script>
+
+    <br />
+    <br />
+    <br />
+
+    <p>over here</p>
+    <div id="myDiv" style="width: 50px; height: 50px; background-color: lightblue;"></div>
+
+
+    <script>
+        function handleMouseOver() {
+            document.getElementById("myDiv").style.backgroundColor = "green";
+        }
+
+        function handleMouseOut() {
+            document.getElementById("myDiv").style.backgroundColor = "lightblue";
+        }
+
+        document.getElementById("myDiv").addEventListener("mouseover", handleMouseOver);
+        document.getElementById("myDiv").addEventListener("mouseout", handleMouseOut);
+    </script>
+    <p>The two most sought after jewelry colors</p>
+    <br />
+    <br />
+
+    <h1> We are doing a survey of the most loved piece of jewelry.</h1>
+    <p>  Please enter the name or code of the piece of jewelry you liked the most here. Thank you</p>
+    <input type="text" id="myInput">
+
+    <script>
+        function handleKeyPress(event) {
+            if (event.keyCode === 13) {
+                var inputText = document.getElementById("myInput").value;
+                alert("You pressed Enter. the most jewelry you like is : " + inputText + " thank you");
+            }
+        }
+
+        document.getElementById("myInput").addEventListener("keypress", handleKeyPress);
+    </script>
+    <br />
+    <br />
+    <br />
+    <p id="demo3"></p>
+
+    <script>
+
+        const cars = ["hello", "Since", "2013", "2"];
+
+        cars[0] = "Copyright";
+
+        cars.pop("2");
+        cars.push("Taaffeite");
+
+        document.getElementById("demo3").innerHTML = cars;
+    </script>
+    <br />
+    <br />
+    
+
+    <button onclick="document.getElementById('demo7').innerHTML=Date()">The time is?</button>
+
+    <p id="demo7"></p>
+
+
+
+</body>
+</html>

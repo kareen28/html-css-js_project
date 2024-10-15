@@ -1,0 +1,31 @@
+﻿body {
+
+
+
+}
+h1 {
+    font-family:'Arabic Typesetting';
+    font-size: 40px;
+    text-shadow:5px 5px 10px black ;
+    
+}
+h5 {
+    font-family: 'Arabic Typesetting';
+    font-size: 30px;
+    color: aliceblue;
+    background-image: linear-gradient(to right,black, magenta);
+    
+}
+
+span {
+    font-family:Algerian;
+    font-size: 40px;
+    color: aliceblue;
+ 
+
+}
+message {
+
+    font-size: 30px;
+    color: aliceblue;
+}

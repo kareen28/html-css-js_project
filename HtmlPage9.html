@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title>hello</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("button1").click(function () {
+                $("div1").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+            });
+        });
+    </script>
+    <br />
+    <br />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").html("Hello <b>Customer</b>");
+            });
+        });
+    </script>
+    <br />
+    <br />
+    <br />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button2").click(function () {
+                $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <button1>Start Animation</button1>
+
+
+
+    <div1 style="background:#808080;height:100px;width:100px;position:absolute;"></div1>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <button>Click to change</button>
+
+    <p>You can click on our socials for a surprise</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p id="p1">Hello customer</p>
+
+    <button2>Click me</button2>
+
+</body>
+</html>

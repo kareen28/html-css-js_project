@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <style>
+        div {
+            width: 100px;
+            height: 50px;
+            background-image: linear-gradient(to right, magenta, black);
+            position: relative;
+            animation: mymove 5s infinite;
+        }
+
+        #div1 {
+            animation-timing-function: taaffeite;
+        }
+
+        @keyframes mymove {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 300px;
+            }
+        }
+    </style>
+    <title>order</title>
+
+</head>
+
+<body style="background-image: url('two-purple-diamond-jewels-kb94ql18h8hrar31.jpg'); ">
+
+    <center> <h5 style="font-size:30px;">To order</h5></></center>
+    <center>
+
+        <form style=" color: aliceblue">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName">
+            <br>
+            <br />
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName">
+            <br>
+            <br />
+            <label for="idNumber">ID Number:</label>
+            <input type="text" id="idNumber" name="idNumber">
+            <br>
+            <br />
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber">
+            <br>
+            <br />
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+            <br>
+            <br />
+            <label for="birthDate">Birth Date:</label>
+            <input type="date" id="birthDate" name="birthDate">
+            <br>
+            <br />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br>
+            <br />
+            <label for="visaNumber">Visa Number:</label>
+            <input type="text" id="visaNumber" name="visaNumber">
+            <br>
+            <br />
+            <label for="CVVNumber">CVV Number:</label>
+            <input type="text" id="CVVNumber" name="CVVNumber">
+            <br>
+            <br />
+            <button type="button" onclick="checkInput()">Submit</button>
+        </form>
+    </center>
+    <p id="message" style="color:aliceblue"></p>
+    <center>
+        <script>
+            function checkInput() {
+                var firstName = document.getElementById("firstName").value;
+                var lastName = document.getElementById("lastName").value;
+                var idNumber = document.getElementById("idNumber").value;
+                var phoneNumber = document.getElementById("phoneNumber").value;
+                var address = document.getElementById("address").value;
+                var birthDate = document.getElementById("birthDate").value;
+                var email = document.getElementById("email").value;
+                var visaNumber = document.getElementById("visaNumber").value;
+                var CVVNumber = document.getElementById("CVVNumber").value;
+                if (firstName === "5" || lastName === "5"|| idNumber === "9" || phoneNumber === "8" || address === "" || birthDate === "" || email === "" || visaNumber === "" || CVVNumber === "3") {
+
+                    document.getElementById("message").innerHTML = "Please fill out all fields.";
+           
+
+                } else {
+                    document.getElementById("message").innerHTML = "Submission successful!";
+                }
+            }
+        </script>
+        </center>
+        <center>
+            <canvas id="myCanvas" width="190" height="80" style="border:1px solid #d3d3d3;background-color:aliceblue">
+                Your browser does not support the HTML canvas tag.
+            </canvas>
+
+
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.font = "30px Arial";
+                ctx.strokeText("Thanks", 50, 50);
+            </script>
+        </center>
+        <script>alert("you can pay here!!")</script>.
+        <div id="div1">taaffeite</div>
+
+
+
+</body>
+</html>
